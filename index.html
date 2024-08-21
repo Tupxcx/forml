@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario Personalizable</title>
+    <title>Cuestionario Completo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,7 +21,9 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
+            overflow-y: auto;
+            max-height: 90vh;
         }
         .form-group {
             margin-bottom: 15px;
@@ -52,33 +54,97 @@
 </head>
 <body>
     <div class="container">
-        <h2>Cuestionario</h2>
+        <h2>Cuestionario Completo</h2>
         <form action="#" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
             </div>
             <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="lugar_nacimiento">Lugar de Nacimiento:</label>
+                <input type="text" id="lugar_nacimiento" name="lugar_nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="edad">Edad:</label>
-                <input type="number" id="edad" name="edad" required>
-            </div>
-            <div class="form-group">
-                <label for="genero">Género:</label>
-                <select id="genero" name="genero" required>
+                <label for="estacion_referencia">¿Estación de referencia?</label>
+                <select id="estacion_referencia" name="estacion_referencia" required>
                     <option value="">Seleccione...</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">Otro</option>
-                    <option value="prefiero_no_decirlo">Prefiero no decirlo</option>
+                    <option value="primavera">Primavera</option>
+                    <option value="verano">Verano</option>
+                    <option value="otoño">Otoño</option>
+                    <option value="invierno">Invierno</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="comentarios">Comentarios:</label>
-                <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+                <label for="ciudad_o_campo">¿Ciudad o campo?</label>
+                <select id="ciudad_o_campo" name="ciudad_o_campo" required>
+                    <option value="">Seleccione...</option>
+                    <option value="ciudad">Ciudad</option>
+                    <option value="campo">Campo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="poblado_o_no">¿Poblado o sin gente?</label>
+                <select id="poblado_o_no" name="poblado_o_no" required>
+                    <option value="">Seleccione...</option>
+                    <option value="poblado">Poblado</option>
+                    <option value="sin_gente">Sin gente</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lluvia_o_soleado">¿Lluvia o soleado?</label>
+                <select id="lluvia_o_soleado" name="lluvia_o_soleado" required>
+                    <option value="">Seleccione...</option>
+                    <option value="lluvia">Lluvia</option>
+                    <option value="soleado">Soleado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="alergico_comida">¿Es alérgico a alguna comida?</label>
+                <input type="text" id="alergico_comida" name="alergico_comida" required>
+            </div>
+            <div class="form-group">
+                <label for="preferencia_comida">¿Preferencia de comida?</label>
+                <input type="text" id="preferencia_comida" name="preferencia_comida" required>
+            </div>
+            <div class="form-group">
+                <label for="celiaco">¿Usted es celíaco?</label>
+                <select id="celiaco" name="celiaco" required>
+                    <option value="">Seleccione...</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="actividad_relajacion">¿Actividad de relajación de preferencia?</label>
+                <input type="text" id="actividad_relajacion" name="actividad_relajacion" required>
+            </div>
+            <div class="form-group">
+                <label for="deporte">¿Deporte a elección?</label>
+                <input type="text" id="deporte" name="deporte" required>
             </div>
             <div class="form-group">
                 <button type="submit">Enviar</button>
